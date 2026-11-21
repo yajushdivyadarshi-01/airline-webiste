@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f8f2">
+  <title>GreenSky Airlines — Choose your seat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="p1.html" aria-label="GreenSky Airlines home"><span class="logo-box">G</span><span class="brand-name">GreenSky<small>AIRLINES</small></span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="p1.html">Home</a><a href="p2.html">Check-in</a><a href="p8.html">Flight info</a></nav>
+    <span class="help">● Here to help</span>
+  </header>
+  <main class="checkin-main">
+    <a class="back-link" href="p3.html">← Back to flight details</a>
+    <section class="checkin-card">
+      <div class="eyebrow">YOUR CHECK-IN · STEP 03</div>
+      <h1>Pick your <span>seat.</span></h1>
+      <p class="description">Choose a green seat. Grey seats are already taken.</p>
+      <div class="seat-legend"><span><i class="legend-dot available-dot"></i> Available</span><span><i class="legend-dot occupied-dot"></i> Occupied</span><span><i class="legend-dot selected-dot"></i> Selected</span></div>
+      <div class="aircraft-front">FRONT OF AIRCRAFT</div>
+      <div class="seat-map" id="seatMap" aria-label="Aircraft seat map"></div>
+      <div class="seat-summary">Selected seat <strong id="selectedSeat">No seat selected</strong></div>
+      <p class="form-error" id="seatError" role="alert"></p>
+      <div class="page-actions"><a class="quiet-link" href="p3.html">← Back</a><button class="start-button" id="seatContinue" type="button" disabled>Continue to bags <span>→</span></button></div>
+    </section>
+  </main>
+  <script src="p4.js"></script>
+</body>
+</html>

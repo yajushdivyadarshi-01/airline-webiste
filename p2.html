@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f8f2">
+  <title>GreenSky Airlines — Passenger check-in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="p1.html" aria-label="GreenSky Airlines home">
+      <span class="logo-box">G</span>
+      <span class="brand-name">GreenSky<small>AIRLINES</small></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="p1.html">Home</a>
+      <a href="p2.html" aria-current="page">Check-in</a>
+      <a href="p8.html">Flight info</a>
+    </nav>
+    <span class="help">● Here to help</span>
+  </header>
+
+  <main class="checkin-main">
+    <a class="back-link" href="p1.html">← Back to home</a>
+    <section class="checkin-card">
+      <div class="eyebrow">YOUR CHECK-IN · STEP 01</div>
+      <h1>Let’s find your <span>booking.</span></h1>
+      <p class="description">Enter your booking reference or the passenger name on your ticket.</p>
+
+      <form id="searchForm" novalidate>
+        <label class="form-field" for="pnr">Booking reference (PNR)</label>
+        <input id="pnr" name="pnr" type="text" placeholder="For example, AI1234" maxlength="8" autocomplete="off">
+        <div class="or-divider"><span>OR</span></div>
+        <label class="form-field" for="passengerName">Passenger name</label>
+        <input id="passengerName" name="passengerName" type="text" placeholder="Name on your booking" autocomplete="name">
+        <p class="form-error" id="formError" role="alert"></p>
+        <button class="start-button submit-button" type="submit">Find my booking <span>→</span></button>
+      </form>
+
+      <section class="verification-result" id="result" aria-live="polite" hidden>
+        <div class="verified-heading"><span>✓</span> Passenger verified</div>
+        <div class="result-details">
+          <div><small>PASSENGER</small><strong id="resultName"></strong></div>
+          <div><small>BOOKING REFERENCE</small><strong id="resultPnr"></strong></div>
+          <div><small>FLIGHT</small><strong id="resultFlight"></strong></div>
+        </div>
+        <p class="next-step">Your passenger details are confirmed. The next step is flight verification.</p>
+        <a class="start-button next-button" id="continueFlight" href="p3.html">Continue to flight <span>→</span></a>
+      </section>
+
+      <p class="privacy-note">Your booking details stay private and secure.</p>
+    </section>
+  </main>
+
+  <script src="p2.js"></script>
+</body>
+</html>

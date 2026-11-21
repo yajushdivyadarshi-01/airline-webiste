@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f8f2">
+  <title>GreenSky Airlines — Baggage details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="p1.html" aria-label="GreenSky Airlines home"><span class="logo-box">G</span><span class="brand-name">GreenSky<small>AIRLINES</small></span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="p1.html">Home</a><a href="p2.html">Check-in</a><a href="p8.html">Flight info</a></nav>
+    <span class="help">● Here to help</span>
+  </header>
+  <main class="checkin-main">
+    <a class="back-link" href="p4.html">← Back to seat selection</a>
+    <section class="checkin-card">
+      <div class="eyebrow">YOUR CHECK-IN · STEP 04</div>
+      <h1>What are you <span>bringing?</span></h1>
+      <p class="description">Add your bag details. Your baggage charge updates automatically.</p>
+      <form id="baggageForm">
+        <div class="form-grid">
+          <label class="form-field" for="bagCount">Number of bags
+            <select id="bagCount"><option value="0">0 bags</option><option value="1">1 bag</option><option value="2">2 bags</option></select>
+          </label>
+          <label class="form-field" for="bag1Weight">Bag 1 weight (kg)
+            <input id="bag1Weight" type="number" min="0" max="50" step="0.1" value="0">
+          </label>
+          <label class="form-field" for="bag2Weight">Bag 2 weight (kg)
+            <input id="bag2Weight" type="number" min="0" max="50" step="0.1" value="0" disabled>
+          </label>
+          <label class="form-field" for="extraBags">Extra bags
+            <input id="extraBags" type="number" min="0" max="5" step="1" value="0">
+          </label>
+        </div>
+        <div class="baggage-summary">
+          <div><small>Total weight</small><strong><span id="totalWeight">0</span> kg</strong></div>
+          <div><small>Extra weight</small><strong><span id="extraWeight">0</span> kg</strong></div>
+          <div><small>Additional charge</small><strong class="green-text">₹<span id="bagCharge">0</span></strong></div>
+        </div>
+        <p class="baggage-rules">Up to 20 kg included · 21–25 kg ₹500 · 26–30 kg ₹1,000 · Over 30 kg ₹2,000</p>
+        <p class="form-error" id="bagError" role="alert"></p>
+        <div class="page-actions"><a class="quiet-link" href="p4.html">← Back</a><button class="start-button" type="submit">Continue to check-in status <span>→</span></button></div>
+      </form>
+    </section>
+  </main>
+  <script src="p5.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f8f2">
+  <title>GreenSky Airlines — Boarding pass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="p1.html" aria-label="GreenSky Airlines home"><span class="logo-box">G</span><span class="brand-name">GreenSky<small>AIRLINES</small></span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="p1.html">Home</a><a href="p2.html">Check-in</a><a href="p8.html">Flight info</a></nav>
+    <span class="help">● Here to help</span>
+  </header>
+  <main class="checkin-main">
+    <a class="back-link" href="p6.html">← Back to check-in status</a>
+    <section class="checkin-card pass-page">
+      <div class="eyebrow">YOUR JOURNEY · BOARDING PASS</div>
+      <h1>And you’re <span>off.</span></h1>
+      <p class="description">Save your pass or print a copy for your trip.</p>
+      <article class="boarding-pass">
+        <div class="pass-main">
+          <div class="pass-brand"><span class="logo-box">G</span><strong>GREEN<span>SKY</span><small>AIRLINES</small></strong><b class="pass-status">CHECKED IN</b></div>
+          <div class="pass-route">
+            <div><small>FROM</small><strong id="passOriginCode">---</strong><span id="passOrigin">—</span></div>
+            <div class="route-arrow"><span></span>✈<span></span></div>
+            <div class="route-destination"><small>TO</small><strong id="passDestinationCode">---</strong><span id="passDestination">—</span></div>
+          </div>
+          <div class="pass-info">
+            <div><small>PASSENGER</small><strong id="passName">—</strong></div>
+            <div><small>FLIGHT</small><strong id="passFlight">—</strong></div>
+            <div><small>DATE</small><strong id="passDate">—</strong></div>
+            <div><small>BOARDING</small><strong id="passTime">—</strong></div>
+            <div><small>SEAT</small><strong id="passSeat">—</strong></div>
+            <div><small>GATE</small><strong id="passGate">—</strong></div>
+            <div><small>PNR</small><strong id="passPnr">—</strong></div>
+            <div><small>BAGS</small><strong id="passBags">—</strong></div>
+          </div>
+          <p class="pass-footer">PLEASE ARRIVE AT THE GATE 30 MINUTES BEFORE DEPARTURE</p>
+        </div>
+        <aside class="pass-stub"><strong>BOARDING PASS</strong><div class="qr-placeholder" id="qrCode" aria-label="Decorative QR code"></div><span id="stubPnr">—</span><small>SCAN AT THE GATE</small></aside>
+      </article>
+      <div class="page-actions pass-buttons"><button class="quiet-button" id="downloadPass" type="button">↓ Download pass</button><button class="start-button" id="printPass" type="button">Print boarding pass <span>↗</span></button></div>
+    </section>
+  </main>
+  <script src="p7.js"></script>
+</body>
+</html>

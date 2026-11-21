@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f8f2">
+  <title>GreenSky Airlines — Flight dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="p1.html" aria-label="GreenSky Airlines home"><span class="logo-box">G</span><span class="brand-name">GreenSky<small>AIRLINES</small></span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="p1.html">Home</a><a href="p2.html">Check-in</a><a href="p8.html" aria-current="page">Flight info</a></nav>
+    <span class="help">● Here to help</span>
+  </header>
+  <main class="dashboard-main">
+    <div class="dashboard-heading"><div class="eyebrow">GREEN SKY · OPERATIONS</div><h1>Flight dashboard</h1><p>A quick overview of today’s journeys.</p></div>
+    <section class="stats-grid">
+      <article class="stat-card"><span>Total passengers</span><strong id="totalPassengers">1,284</strong><small>Today’s bookings</small></article>
+      <article class="stat-card"><span>Checked in</span><strong id="checkedPassengers">986</strong><small id="checkedPercent">76.8% of passengers</small></article>
+      <article class="stat-card"><span>Pending check-ins</span><strong id="pendingPassengers">298</strong><small>Across today’s flights</small></article>
+      <article class="stat-card"><span>Seats occupied</span><strong>1,042</strong><small>81.1% load factor</small></article>
+    </section>
+    <section class="dashboard-charts">
+      <article class="dashboard-box"><h2>Check-in activity</h2><p>Passenger check-ins by hour</p><div class="simple-chart" aria-label="Check-ins by hour"><span style="height:34%" data-time="06"></span><span style="height:48%" data-time="08"></span><span style="height:62%" data-time="10"></span><span style="height:44%" data-time="12"></span><span style="height:75%" data-time="14"></span><span style="height:92%" data-time="16"></span><span style="height:61%" data-time="18"></span><span style="height:38%" data-time="20"></span></div><div class="chart-labels"><span>06</span><span>08</span><span>10</span><span>12</span><span>14</span><span>16</span><span>18</span><span>20</span></div></article>
+      <article class="dashboard-box"><h2>Check-in status</h2><p>Passenger progress</p><div class="dashboard-donut"><div><strong id="donutPercent">77%</strong><small>checked in</small></div></div><div class="donut-labels"><span>● Checked in <b id="donutChecked">986</b></span><span>● Pending <b id="donutPending">298</b></span></div></article>
+    </section>
+    <section class="dashboard-box recent-box"><div class="table-heading"><div><h2>Recent passengers</h2><p>Latest check-in activity</p></div><span>2 BOOKINGS</span></div><div class="table-scroll"><table><thead><tr><th>PASSENGER</th><th>FLIGHT</th><th>ROUTE</th><th>SEAT</th><th>STATUS</th></tr></thead><tbody id="recentPassengers"><tr><td>Rahul Sharma</td><td>AI-202</td><td>Delhi → Mumbai</td><td>2A</td><td><span class="table-status">Checked in</span></td></tr><tr><td>Priya Singh</td><td>AI-305</td><td>Bangalore → Kolkata</td><td>4C</td><td><span class="table-delay">Delayed</span></td></tr></tbody></table></div></section>
+    <p class="dashboard-note">Sample airline operations data · <span id="dashboardDate"></span></p>
+  </main>
+  <script src="p8.js"></script>
+</body>
+</html>
